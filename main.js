@@ -13,7 +13,14 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoia2V2ZXRpaDg2MSIsImEiOiJja2h4MzFxaG8wOW5pMzBsdGZ1NXFoeHh5In0.hw5mLyF4KWalDgcxAWrmuw'
 }).addTo(mymap);
-var marker = L.marker([34.0614, -118.08162]).addTo(mymap);
+
+const Icon = L.icon({
+  iconUrl: "./images/icon-location.svg",
+});
+
+var marker = L.marker([34.0614, -118.08162], {
+  icon: Icon,
+}).addTo(mymap);
 
 
 function main(ipAddress){
